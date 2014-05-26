@@ -1,8 +1,8 @@
-package edu.vuum.mooca;
 import static org.junit.Assert.*;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
+import edu.vuum.mooca.SynchronizedQueue;
 import org.junit.Before;
 import org.junit.Test;
 
