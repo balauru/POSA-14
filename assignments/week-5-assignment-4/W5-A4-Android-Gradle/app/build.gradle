@@ -6,8 +6,11 @@ android {
 
     defaultConfig {
         applicationId "edu.vuum.mocca"
-        minSdkVersion 8
+        minSdkVersion 14
         targetSdkVersion 19
+
+        testApplicationId "com.example.w5_a4_android_test"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
     }
 
     buildTypes {
@@ -16,4 +19,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:+'
+    androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.1'
+    androidTestCompile 'com.android.support:support-v4:+'
 }
