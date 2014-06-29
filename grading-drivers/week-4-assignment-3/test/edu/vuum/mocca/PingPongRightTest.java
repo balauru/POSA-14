@@ -12,7 +12,7 @@ import org.junit.Test;
 
 /**
  * @class PingPongRightTest
- * 
+ *
  * @brief This JUnit test checks the PingPong program to make sure it's working
  *        properly.
  */
@@ -46,7 +46,7 @@ public class PingPongRightTest {
 
     /*
      * Test the process(...) logic/accuracy
-     * 
+     *
      * Gives some helpful error outputs for some simple error states.
      */
     @Test(timeout = 3000)
@@ -67,20 +67,20 @@ public class PingPongRightTest {
             boolean pingAllFirstTrue = outResults.equals(pingAllFirst);
             boolean pongAllFirstTrue = outResults.equals(pongAllFirst);
 
-            if (errContent.toString().length() != 0) 
+            if (errContent.toString().length() != 0)
                 fail("There was error text.");
 
-            if (pingAllFirstTrue) 
+            if (pingAllFirstTrue)
                 fail("Ping Thread completed before Pong started.");
 
-            if (pongAllFirstTrue) 
+            if (pongAllFirstTrue)
                 fail("Pong Thread completed before Ping started.");
 
-            if (!(windowsTrue || unixTrue)) 
-                fail("Output was wrong.\n" 
-                     + "--- Received output ---\n" 
-                     + outResults 
-                     + "--- Expected output ---\n" 
+            if (!(windowsTrue || unixTrue))
+                fail("Output was wrong.\n"
+                     + "--- Received output ---\n"
+                     + outResults
+                     + "--- Expected output ---\n"
                      + testResultWindows);
 
             outContent.reset();
